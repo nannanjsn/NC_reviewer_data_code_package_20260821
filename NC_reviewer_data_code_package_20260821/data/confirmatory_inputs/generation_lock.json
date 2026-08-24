@@ -1,0 +1,10 @@
+{
+  "status": "generated_after_v32_development_lock",
+  "seed": 2026081123,
+  "per_archetype": 30,
+  "n_archetypes": 6,
+  "n_curves": 360,
+  "days": 220,
+  "paired_outbreak_no_outbreak": true,
+  "generator": "D:\\研究生\\20260616\\小论文\\母小波确认\\mother_wavelet_global_validation_v2.py"
+}

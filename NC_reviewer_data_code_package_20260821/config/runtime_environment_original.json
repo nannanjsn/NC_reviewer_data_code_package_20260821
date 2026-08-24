@@ -1,0 +1,12 @@
+{
+  "python": "3.12.13 (main, Aug  7 2026, 02:26:41) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26100-SP0",
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "core_code_sha256": "44D3BCC6DE54337EE16344C9E5858FE109765E781C302B725AAD674B07B9CD18",
+  "cross_pathogen_code_sha256": "CC3B9333676FA5F68DB349BA568B8EE91E10EAD74304729C395BD1AC24098408",
+  "locked_parameter_sha256": "4F93654E75699C9729A4F5828148532C95DC094B953E8B3DCFBB56C5F2647DCB",
+  "runtime_note": "Scientific dependencies were supplied through the fixed workspace runtime; the packaged code differs from the analysis snapshot only by removal of development-machine absolute-path fallbacks.",
+  "scipy": "1.18.0",
+  "matplotlib": "3.11.1"
+}

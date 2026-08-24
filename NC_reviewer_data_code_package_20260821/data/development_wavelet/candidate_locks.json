@@ -1,0 +1,102 @@
+{
+  "morlet_w6": {
+    "parameters": {
+      "z_threshold": 4.0,
+      "persistence_updates": 3,
+      "baseline_points": 12
+    },
+    "development_metrics": {
+      "n_outbreak": 120,
+      "n_null": 120,
+      "timely_sensitivity": 0.09166666666666666,
+      "early_false_alert_rate": 0.0,
+      "miss_or_untimely_rate": 0.9083333333333333,
+      "median_delay_gt_among_timely": 2.3322284656088383,
+      "null_curve_false_alert_rate": 0.21666666666666667,
+      "null_false_alerts_per_1000_days": 1.1711184180892753,
+      "mean_combined_loss": 2.353280347390611
+    },
+    "grid_size": 54,
+    "constraint_satisfied": false
+  },
+  "morlet_w7": {
+    "parameters": {
+      "z_threshold": 4.0,
+      "persistence_updates": 3,
+      "baseline_points": 12
+    },
+    "development_metrics": {
+      "n_outbreak": 120,
+      "n_null": 120,
+      "timely_sensitivity": 0.03333333333333333,
+      "early_false_alert_rate": 0.0,
+      "miss_or_untimely_rate": 0.9666666666666667,
+      "median_delay_gt_among_timely": 2.2271141352167687,
+      "null_curve_false_alert_rate": 0.23333333333333334,
+      "null_false_alerts_per_1000_days": 1.2612044502499888,
+      "mean_combined_loss": 2.4352922722594323
+    },
+    "grid_size": 54,
+    "constraint_satisfied": false
+  },
+  "morse_p6": {
+    "parameters": {
+      "z_threshold": 4.0,
+      "persistence_updates": 3,
+      "baseline_points": 8
+    },
+    "development_metrics": {
+      "n_outbreak": 120,
+      "n_null": 120,
+      "timely_sensitivity": 0.09166666666666666,
+      "early_false_alert_rate": 0.008333333333333333,
+      "miss_or_untimely_rate": 0.9083333333333333,
+      "median_delay_gt_among_timely": 2.16797443517704,
+      "null_curve_false_alert_rate": 0.15,
+      "null_false_alerts_per_1000_days": 0.8107742894464214,
+      "mean_combined_loss": 2.2074362003411534
+    },
+    "grid_size": 54,
+    "constraint_satisfied": false
+  },
+  "morse_p9_5": {
+    "parameters": {
+      "z_threshold": 4.0,
+      "persistence_updates": 3,
+      "baseline_points": 12
+    },
+    "development_metrics": {
+      "n_outbreak": 120,
+      "n_null": 120,
+      "timely_sensitivity": 0.0,
+      "early_false_alert_rate": 0.0,
+      "miss_or_untimely_rate": 1.0,
+      "median_delay_gt_among_timely": NaN,
+      "null_curve_false_alert_rate": 0.16666666666666666,
+      "null_false_alerts_per_1000_days": 0.9008603216071348,
+      "mean_combined_loss": 2.3333333333333335
+    },
+    "grid_size": 54,
+    "constraint_satisfied": false
+  },
+  "dog2_control": {
+    "parameters": {
+      "z_threshold": 3.0,
+      "persistence_updates": 3,
+      "baseline_points": 12
+    },
+    "development_metrics": {
+      "n_outbreak": 120,
+      "n_null": 120,
+      "timely_sensitivity": 0.10833333333333334,
+      "early_false_alert_rate": 0.008333333333333333,
+      "miss_or_untimely_rate": 0.8916666666666667,
+      "median_delay_gt_among_timely": 2.4885825933470334,
+      "null_curve_false_alert_rate": 0.1,
+      "null_false_alerts_per_1000_days": 0.5405161929642809,
+      "mean_combined_loss": 2.088473909491605
+    },
+    "grid_size": 54,
+    "constraint_satisfied": true
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "all_prelocked_success_criteria_met": true,
+  "checks": {
+    "point_sensitivity_at_least_0p80": true,
+    "paired_difference_versus_Rt_positive": true,
+    "null_burden_within_prelocked_maximum": true
+  },
+  "primary_detected_n": 155,
+  "primary_n_outbreak": 180,
+  "primary_sensitivity": 0.8611111111111112,
+  "primary_sensitivity_95ci": [
+    0.8030084994918879,
+    0.9041225297869472
+  ],
+  "primary_median_lead_days": 10.507435704803882,
+  "full_null_alert_days_per_100d": 2.319696330662168,
+  "day_level_specificity": 0.9768030366933783,
+  "paired_difference_versus_Rt": 0.11666666666666667,
+  "paired_difference_versus_Rt_95ci": [
+    0.06111111111111111,
+    0.17777777777777778
+  ],
+  "mcnemar_exact_p_versus_Rt": 0.0005082604475319386,
+  "interpretation_boundary": "This is a different operating tier, not a revision of the confirmed 1.5-burden result and not evidence that the algorithm improved at the same alert burden."
+}

@@ -1,0 +1,34 @@
+{
+  "figure": "Figure 2",
+  "conclusion": "A shared EEMD–CWT structural core converts heterogeneous epidemic sequences into ordered T1/T2/Tp nodes, with archetype-adaptive thresholds and stable prospective confirmation.",
+  "representative_case_rule": "mpox-specific curve 45; its normalized composite node error is approximately the pooled median among 400 cross-pathogen validation curves.",
+  "archetype": "mpox_specific",
+  "curve_id": 45,
+  "simulation_seed": 5555,
+  "eemd_trials": 12,
+  "truth": {
+    "T1_growth": 12,
+    "T1_struct": 16,
+    "T2_dyn": 38,
+    "T2_dom": 43,
+    "Tp": 82
+  },
+  "estimates": {
+    "T1": 19,
+    "T2": 54,
+    "Tp": 88
+  },
+  "prospective_availability": {
+    "T1_first_alert_day": 20,
+    "T1_stable_confirmation_day": 22,
+    "T2_stable_confirmation_day": 94,
+    "Tp_stable_confirmation_day": 110
+  },
+  "source_code": "D:\\研究生\\20260616\\小论文\\加实验-基孔、猴痘\\cross_pathogen_extension_v1\\cross_pathogen_phase_extension_v1.py",
+  "source_validation_table": "D:\\研究生\\20260616\\小论文\\加实验-基孔、猴痘\\cross_pathogen_extension_v1\\outputs_final_20260624\\stage2_cross_pathogen_validation\\cross_pathogen_core_archetype_all_detail.csv",
+  "exports": {
+    "svg": "D:\\研究生\\20260616\\小论文\\加实验-基孔、猴痘\\cross_pathogen_extension_v1\\figure2_optimized\\figure2_eemd_cwt_cross_pathogen.svg",
+    "tiff_600dpi": "D:\\研究生\\20260616\\小论文\\加实验-基孔、猴痘\\cross_pathogen_extension_v1\\figure2_optimized\\figure2_eemd_cwt_cross_pathogen_600dpi.tiff",
+    "source_csv": "D:\\研究生\\20260616\\小论文\\加实验-基孔、猴痘\\cross_pathogen_extension_v1\\figure2_optimized\\figure2_source_data.csv"
+  }
+}

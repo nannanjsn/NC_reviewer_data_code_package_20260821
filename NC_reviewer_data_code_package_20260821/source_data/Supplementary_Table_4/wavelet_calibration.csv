@@ -1,0 +1,6 @@
+﻿id,family,role,fourier_factor,duration_parameter,power_efolding_radius_per_scale,numerical_mother_energy
+morlet_w6,morlet,legacy_primary_baseline,1.0330436477492537,6.0,1.414217070234846,1.0
+morlet_w7,morlet,within_family_sensitivity,0.8886210242379331,7.0,1.41421706809968,1.0
+morse_p6,morse,duration_matched_analytic_candidate,3.958158714452873,6.0,5.3979076987939845,1.0000000000000002
+morse_p9_5,morse,frequency_concentrated_analytic_candidate,2.916396276132464,9.486832980505138,6.250968890329109,0.999999999999995
+dog2_control,dog2,real_wavelet_control,3.97383530631844,,0.7227353394556043,1.0000000000000002

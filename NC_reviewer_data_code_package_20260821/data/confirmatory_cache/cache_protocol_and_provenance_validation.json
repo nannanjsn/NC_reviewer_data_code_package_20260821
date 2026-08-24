@@ -1,0 +1,39 @@
+{
+  "analysis": "strict-prefix full V31.1 Morlet-w6 score cache",
+  "version": "1.0",
+  "source_directory": "D:\\研究生\\20260616\\小论文\\误报负担\\sensitivity_prioritized_confirmation_seed_2026081123",
+  "output_directory": "D:\\研究生\\20260616\\小论文\\误报负担\\cache_sensitivity_prioritized_confirmation_seed_2026081123",
+  "configuration": {
+    "eemd_trials": 3,
+    "window_size": 72,
+    "step": 3,
+    "confirm_rounds": 2,
+    "stable_rounds": 3,
+    "min_history": 6,
+    "recency_weight": 0.04
+  },
+  "workers": 4,
+  "smoke_per_stratum": 0,
+  "morlet_w0": 6,
+  "feature_chain": "EEMD IMF1 -> Morlet w6 CWT -> high/mid/low band energies, energy ratios, spectral centroid change, raw-growth gate, structural validity, and prospective persistence",
+  "score_definition": "development-locked continuous confidence = max(full-V31.1 structural strength - 0.04 * candidate age in generation intervals, valid raw-growth margin), after six complete strict-prefix updates",
+  "stable_definition": "three consecutive scheduled updates: trailing minimum of the continuous first-indication confidence; this is a sustained-support tier and does not replace the core phase estimates",
+  "selection_note": "0.04 and three updates were selected by pair-grouped, archetype-stratified five-fold development analysis before validation",
+  "label_blind_construction": true,
+  "elapsed_seconds": 441.8623185157776,
+  "splits_requested": [
+    "validation"
+  ],
+  "splits": {
+    "validation": {
+      "requested": 360,
+      "completed": 360,
+      "failed": 0,
+      "score_rows": 22286
+    }
+  },
+  "source_hashes": {
+    "validation_curve_metadata.csv": "d38b163838bab29fc4009de55a1cde4eb20049d5ff9a16609892d592b54cfea3",
+    "validation_curve_arrays.npz": "0cf9b6682f7501d94164325cfaf949d33f6ec0a598c77f76a0da07b1437b9055"
+  }
+}

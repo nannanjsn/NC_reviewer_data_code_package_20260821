@@ -1,0 +1,37 @@
+﻿method,method_label,archetype,n,detected_n,sensitivity
+BOCPD,Bayesian online changepoint,contact_network,30,23,0.7666666666666667
+BOCPD,Bayesian online changepoint,fast_respiratory,30,16,0.5333333333333333
+BOCPD,Bayesian online changepoint,influenza_like,30,16,0.5333333333333333
+BOCPD,Bayesian online changepoint,moderate_respiratory,30,22,0.7333333333333333
+BOCPD,Bayesian online changepoint,slow_high_severity,30,24,0.8
+BOCPD,Bayesian online changepoint,sparse_zoonotic,30,28,0.9333333333333333
+CUSUM,CUSUM,contact_network,30,16,0.5333333333333333
+CUSUM,CUSUM,fast_respiratory,30,8,0.26666666666666666
+CUSUM,CUSUM,influenza_like,30,15,0.5
+CUSUM,CUSUM,moderate_respiratory,30,15,0.5
+CUSUM,CUSUM,slow_high_severity,30,17,0.5666666666666667
+CUSUM,CUSUM,sparse_zoonotic,30,23,0.7666666666666667
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,contact_network,30,27,0.9
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,fast_respiratory,30,23,0.7666666666666667
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,influenza_like,30,23,0.7666666666666667
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,moderate_respiratory,30,30,1.0
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,slow_high_severity,30,23,0.7666666666666667
+EEMD_CWT_Rt_concordance,EEMD-CWT/Rt concordance,sparse_zoonotic,30,29,0.9666666666666667
+EWMA,EWMA,contact_network,30,13,0.43333333333333335
+EWMA,EWMA,fast_respiratory,30,20,0.6666666666666666
+EWMA,EWMA,influenza_like,30,25,0.8333333333333334
+EWMA,EWMA,moderate_respiratory,30,23,0.7666666666666667
+EWMA,EWMA,slow_high_severity,30,13,0.43333333333333335
+EWMA,EWMA,sparse_zoonotic,30,16,0.5333333333333333
+Rt_P_gt_1,Cori-style P(Rt>1),contact_network,30,21,0.7
+Rt_P_gt_1,Cori-style P(Rt>1),fast_respiratory,30,24,0.8
+Rt_P_gt_1,Cori-style P(Rt>1),influenza_like,30,24,0.8
+Rt_P_gt_1,Cori-style P(Rt>1),moderate_respiratory,30,27,0.9
+Rt_P_gt_1,Cori-style P(Rt>1),slow_high_severity,30,16,0.5333333333333333
+Rt_P_gt_1,Cori-style P(Rt>1),sparse_zoonotic,30,22,0.7333333333333333
+rolling_quantile,Rolling quantile,contact_network,30,16,0.5333333333333333
+rolling_quantile,Rolling quantile,fast_respiratory,30,24,0.8
+rolling_quantile,Rolling quantile,influenza_like,30,20,0.6666666666666666
+rolling_quantile,Rolling quantile,moderate_respiratory,30,24,0.8
+rolling_quantile,Rolling quantile,slow_high_severity,30,19,0.6333333333333333
+rolling_quantile,Rolling quantile,sparse_zoonotic,30,21,0.7

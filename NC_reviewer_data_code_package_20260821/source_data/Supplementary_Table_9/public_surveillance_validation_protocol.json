@@ -1,0 +1,20 @@
+{
+  "estimand": "national episode-level temporal concordance",
+  "label_construction_order": [
+    "assemble official weekly evidence without algorithm dates",
+    "apply candidate and persistence rules",
+    "freeze interval-valued reference",
+    "load and compare EEMD-CWT landmarks"
+  ],
+  "prohibited_label_inputs": [
+    "EEMD/CWT/IMF or wavelet-energy features",
+    "structural-concordance score",
+    "EEMD-CWT or comparator alert dates",
+    "the target daily case series"
+  ],
+  "candidate_rule": "first reviewed week with either an explicit official escalation from low/localised activity to region-wide rising activity, or at least two non-algorithm evidence domains",
+  "confirmation_rule": "activity must persist in the following week; across the candidate and confirmation weeks there must be at least two evidence domains and at least one quantitative or pathogen-specific item",
+  "reference_interval": "candidate-week start through confirmation-week end",
+  "scale_rule": "national references are compared only with national outputs",
+  "interpretation_limit": "supports external temporal concordance only; does not estimate city-level accuracy, sensitivity, specificity, PR-AUC, or calibration"
+}

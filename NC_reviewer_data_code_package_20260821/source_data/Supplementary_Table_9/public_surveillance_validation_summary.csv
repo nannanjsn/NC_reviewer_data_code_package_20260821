@@ -1,0 +1,2 @@
+﻿n_episodes,n_intervals_overlapping_T1_T2,median_T1_lead_to_reference_start_days,n_T2_inside_reference_interval,permitted_claim
+2,2,5.0,1,Two public-surveillance intervals overlapped T1-T2; descriptive national episode-level temporal concordance only.

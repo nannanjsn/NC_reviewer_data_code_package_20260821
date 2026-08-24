@@ -1,0 +1,83 @@
+{
+  "analysis": "unified strict-prefix operational benchmark",
+  "version": "2.0-full-v31.1-morlet-w6",
+  "seed": 20260729,
+  "bootstrap_replicates": 1000,
+  "source_directory": "D:\\研究生\\20260616\\小论文\\母小波确认\\outputs_v2\\20260716_103352_formal_v2",
+  "v31_cache_directory": "D:\\研究生\\20260616\\小论文\\误报负担\\cache_v31_full_morlet_w6",
+  "development": {
+    "outbreak": 120,
+    "matched_no_outbreak": 120
+  },
+  "outer_validation": {
+    "outbreak": 180,
+    "matched_no_outbreak": 180
+  },
+  "archetypes": [
+    "contact_network",
+    "fast_respiratory",
+    "influenza_like",
+    "moderate_respiratory",
+    "slow_high_severity",
+    "sparse_zoonotic"
+  ],
+  "data_model": "integer renewal process with negative-binomial transmission, ascertainment, reporting delay and weekday batching",
+  "T1": "latent Rt crossing 1 plus simulated median reporting delay",
+  "T2": "latent Rt ramp reaching 90% of the post-transition level plus simulated median reporting delay",
+  "effective_window": "[T1 - 0.5 GT, T2)",
+  "lead_time": "T2 minus first alert in the effective window; misses remain misses and are not assigned zero lead",
+  "threshold_calibration": "development no-outbreak curves only; frozen before outer validation",
+  "threshold_lock_file": "D:\\研究生\\20260616\\小论文\\误报负担\\outputs_unified_operational_benchmark_v31_development\\development_threshold_locks.csv",
+  "threshold_lock_sha256": "7c80f458ce5662e65b5e0c6b9c3e116d1a6eb1ad105fb414eb06d04a2467d60a",
+  "regimes": [
+    {
+      "regime": "burden_low",
+      "criterion": "alert_days_per_100d",
+      "target": 1.0
+    },
+    {
+      "regime": "burden_high",
+      "criterion": "alert_days_per_100d",
+      "target": 3.0
+    },
+    {
+      "regime": "specificity_90",
+      "criterion": "null_curve_fpr",
+      "target": 0.1
+    }
+  ],
+  "common_update_interval_days": 3,
+  "alarm_state": {
+    "reset_after_below_threshold_updates": 2,
+    "cooldown_days": 7,
+    "primary_equal_load_measure": "active alert days per 100 surveillance days",
+    "secondary_load_measures": [
+      "alert episodes per 100 surveillance days",
+      "mean alert episode duration",
+      "proportion of null curves with any alert"
+    ]
+  },
+  "EEMD_CWT_first": "after six strict-prefix updates: max(full-V31.1 structural strength - 0.04 * candidate age in generation intervals, valid raw-growth margin)",
+  "EEMD_CWT_stable": "trailing minimum across three consecutive scheduled updates; a sustained-support tier that is never backdated",
+  "PR_AUC_target": "curve-day membership in the effective response window, evaluated before T2 and on all no-outbreak surveillance days",
+  "calibration": "monotone Platt mapping fitted on development curve-days; unavailable pre-update scores are imputed to the development baseline, not an extreme sentinel; Brier score and calibration intercept/slope are evaluated in outer validation",
+  "claim_boundaries": [
+    "This is internal synthetic validation, not external accuracy validation.",
+    "EEMD-CWT rows use the complete prospective V31.1 Morlet-w6 feature and gate chain, not the mother-wavelet single-band energy qualification proxy.",
+    "Farrington_style_GLM is a short-history quasi-Poisson analogue, not canonical Farrington Flexible; canonical Farrington is conditionally ineligible without multi-year seasonal history.",
+    "Sequential GLR and BOCPD are operational changepoint comparators; retrospective full-series PELT is not treated as an online alert.",
+    "The benchmark-specific T1 and T2 do not replace the core framework's phase definitions."
+  ],
+  "source_hashes": {
+    "development_curve_metadata.csv": "3802d6d06ba50f162b484e66fde4ab659edb79154df6dc38389712c69cc782bf",
+    "development_curve_arrays.npz": "c62873273ac4b522b578fc12dbbf979e38966d1b35f11b546dfc1a2d0407118a",
+    "validation_curve_metadata.csv": "d87adfea9ea2c2a90066b1a313e36ed230cb2c3b18a599081a4ef43d0221c06d",
+    "validation_curve_arrays.npz": "e619f3d9b197b06333105cf4f81f76aaac6634a7facb8defd44033e60fefbb92"
+  },
+  "v31_cache_hashes": {
+    "development_v31_full_scores.csv": "34d2341ea483033ca448d213918aa6aaa1c536324c0b2ea2e54e4568773c3680",
+    "validation_v31_full_scores.csv": "6cb30724308f3094c5fdbd546a49928a30a40a3ee042183b4811541503cd563a",
+    "development_v31_full_audit.csv": "1dc9681dc32f27aee20998d5f962509391f335a90032b2da95a65044c82e5b2e",
+    "validation_v31_full_audit.csv": "6a33f8b7fea9e51ea206fb4d08fbdb44126b52d00a5ea50bffd3ba1a83b52131"
+  }
+}

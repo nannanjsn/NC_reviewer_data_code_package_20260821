@@ -1,0 +1,3 @@
+﻿episode,candidate_week,confirmation_week,reference_start,reference_end,active_evidence_domains,construction_status,reference_interpretation
+"Influenza A(H1N1)pdm09, China, 2009",2009-W35,2009-W36,2009-08-31,2009-09-13,healthcare_trajectory; outbreak_or_geographic_expansion; pathogen_specific_laboratory,Rule-derived before algorithm-date join,candidate onset through persistence confirmation
+"Seasonal influenza, China, 2025-2026",2025-W41,2025-W42,2025-10-06,2025-10-19,healthcare_trajectory; official_regional_escalation; outbreak_or_geographic_expansion,Rule-derived before algorithm-date join,candidate onset through persistence confirmation

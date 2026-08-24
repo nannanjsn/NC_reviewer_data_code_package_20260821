@@ -1,0 +1,2 @@
+﻿dataset,n_units,T1_median,T1_iqr_low,T1_iqr_high,T2_median,T2_iqr_low,T2_iqr_high,T_peak_median,T_peak_iqr_low,T_peak_iqr_high,alert_days_median,alert_days_iqr_low,alert_days_iqr_high,T1_to_peak_days_median,T1_to_peak_days_iqr_low,T1_to_peak_days_iqr_high,T1_raw_z_median,T1_raw_z_iqr_low,T1_raw_z_iqr_high,T2_dom_gap_median,T2_dom_gap_iqr_low,T2_dom_gap_iqr_high,high_medium_confidence_rate
+h1n1_2009_historical_pandemic_external,291,151.0,119.5,166.0,158.0,134.0,175.5,178.0,163.5,194.0,6.0,3.0,12.5,19.0,8.5,47.0,3.15,2.72,3.99,-0.075,-0.237,0.077,0.9965635738831615

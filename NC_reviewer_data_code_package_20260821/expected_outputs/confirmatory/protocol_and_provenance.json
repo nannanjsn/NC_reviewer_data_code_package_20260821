@@ -1,0 +1,15 @@
+{
+  "threshold_search_on_fresh_seed": false,
+  "endpoint_search_on_fresh_seed": false,
+  "operating_target_search_on_fresh_seed": false,
+  "lock_hash": "c7c12758385083377d965db4cc74a2028a1d013b511e1915c47dfc370cb7e3bb",
+  "metadata_hash": "d38b163838bab29fc4009de55a1cde4eb20049d5ff9a16609892d592b54cfea3",
+  "arrays_hash": "0cf9b6682f7501d94164325cfaf949d33f6ec0a598c77f76a0da07b1437b9055",
+  "cache_hash": "404079a12dccfaa96cd34fa842c5281df51ca94bb2432f4fa45693c0b6f0c872",
+  "primary_candidate_definition": {
+    "family": "V32.1_bidirectional_concordance",
+    "formula": "Rt z + 0.40 * clipped structural mean-of-two z",
+    "concordance_weight": 0.4
+  },
+  "common_alarm_policy": "review_1d"
+}

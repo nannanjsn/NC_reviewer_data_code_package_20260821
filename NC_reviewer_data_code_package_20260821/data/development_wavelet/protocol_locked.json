@@ -1,0 +1,111 @@
+{
+  "protocol_version": "mother-wavelet-global-remediation-v2.0",
+  "status": "prospective-for-new-v2-simulations-not-preregistered-for-legacy-results",
+  "primary_question": "Under an independently defined epidemic transition and a strictly past-only operational analysis, is there sufficient evidence to replace Morlet w0=6?",
+  "baseline": "morlet_w6",
+  "candidates": [
+    {
+      "id": "morlet_w6",
+      "family": "morlet",
+      "w0": 6.0,
+      "role": "legacy_primary_baseline"
+    },
+    {
+      "id": "morlet_w7",
+      "family": "morlet",
+      "w0": 7.0,
+      "role": "within_family_sensitivity"
+    },
+    {
+      "id": "morse_p6",
+      "family": "morse",
+      "beta": 12.0,
+      "gamma": 3.0,
+      "role": "duration_matched_analytic_candidate"
+    },
+    {
+      "id": "morse_p9_5",
+      "family": "morse",
+      "beta": 30.0,
+      "gamma": 3.0,
+      "role": "frequency_concentrated_analytic_candidate"
+    },
+    {
+      "id": "dog2_control",
+      "family": "dog2",
+      "order": 2,
+      "role": "real_wavelet_control"
+    }
+  ],
+  "design": {
+    "truth": "known day on which latent time-varying Rt crosses 1 from below",
+    "observation_target": "latent Rt-crossing day plus the simulated median reporting delay",
+    "data_model": "integer renewal-process incidence with negative-binomial transmission, binomial ascertainment, discrete reporting delay, weekday batching and matched no-crossing controls",
+    "development_validation_separation": true,
+    "paired_candidate_inputs": true,
+    "same_eemd_imf1_for_all_candidates_at_each_update": true,
+    "strict_prefix_updates": true,
+    "coi_policy": "use only the latest anchor at which every scale in the prespecified band is outside the candidate-specific power e-folding COI; score availability is the prefix end",
+    "primary_endpoint": "first operational alert availability time; back-cast anchor is never counted as alert time"
+  },
+  "wavelet_harmonization": {
+    "common_fourier_period_grid": true,
+    "voices_per_octave": 12,
+    "unit_mother_wavelet_energy": true,
+    "candidate_specific_coi": true,
+    "period_band_in_gt": [
+      0.35,
+      2.5
+    ]
+  },
+  "tuning": {
+    "z_threshold": [
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      3.5,
+      4.0
+    ],
+    "persistence_updates": [
+      1,
+      2,
+      3
+    ],
+    "baseline_points": [
+      5,
+      8,
+      12
+    ],
+    "equal_grid_for_each_candidate": true,
+    "development_null_curve_false_alert_constraint": 0.1
+  },
+  "validation": {
+    "timely_window_gt": [
+      -0.5,
+      3.0
+    ],
+    "candidate_false_alert_rate_max_increase": 0.02,
+    "candidate_timely_sensitivity_max_decrease": 0.03,
+    "minimum_mean_loss_improvement": 0.15,
+    "paired_hierarchical_bootstrap_replicates": 2000,
+    "confidence": 0.95,
+    "selection_rule": "replace baseline only if safety gates pass and the upper confidence limit for paired candidate-minus-baseline loss is below -minimum_mean_loss_improvement",
+    "tie_rule": "retain Morlet w0=6"
+  },
+  "formal_minimum": {
+    "development_per_archetype": 20,
+    "validation_per_archetype": 30,
+    "matched_null_ratio": 1.0,
+    "days": 220,
+    "eemd_trials": 20,
+    "update_step_days": 3,
+    "independent_random_seeds": true
+  },
+  "claim_boundaries": [
+    "The legacy formal run is diagnostic and cannot establish the optimal mother wavelet.",
+    "New simulation validation is internal validation, not external validation.",
+    "Unlabelled real outbreaks are descriptive transportability applications, not accuracy validation.",
+    "A retained baseline means insufficient evidence to replace it, not proof of global optimality."
+  ]
+}

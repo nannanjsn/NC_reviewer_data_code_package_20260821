@@ -1,0 +1,85 @@
+{
+  "status": "locked_before_fresh_seed_generation",
+  "lock_date": "2026-08-11",
+  "purpose": "Independent replication of a sensitivity-prioritized operating tier for the already locked observable-expansion endpoint",
+  "selection_history": "The 2.25 target was selected after a diagnostic burden frontier on an already unblinded seed. Consequently that frontier is exploratory; only the new seed named here can provide independent replication.",
+  "new_seed": 2026081123,
+  "simulation_days": 220,
+  "outbreak_curves_per_archetype": 30,
+  "paired_no_transition_curves_per_archetype": 30,
+  "n_archetypes": 6,
+  "primary_endpoint": {
+    "lower_boundary": "T1_observable - 0.5 generation intervals",
+    "upper_boundary": "T2_Rt90_plus_reporting_delay + 1.0 mean generation interval",
+    "interval_rule": "lower inclusive; upper exclusive"
+  },
+  "stress_test_endpoint": {
+    "lower_boundary": "T1_observable - 0.5 generation intervals",
+    "upper_boundary": "T2_Rt90_plus_reporting_delay"
+  },
+  "burden_definition": "Alert-days per 100 complete paired no-transition surveillance days",
+  "target_alert_days_per_100d": 2.25,
+  "maximum_acceptable_alert_days_per_100d": 2.6,
+  "primary_method": {
+    "candidate": "rt_concordance_p40",
+    "name": "EEMD-CWT/Rt concordance",
+    "formula": "Rt z + 0.40 * clipped structural mean-of-two z",
+    "alarm_policy": "review_1d",
+    "development_locked_threshold": 1.055219814777607,
+    "development_achieved_burden": {
+      "events_per_100d": 2.2508038585209005,
+      "null_curve_fpr": 0.975,
+      "alert_days_per_100d": 2.2508038585209005,
+      "mean_episode_duration_days": 1.0
+    }
+  },
+  "locked_comparator_thresholds": {
+    "Rt_P_gt_1": 0.9355011551324904,
+    "rolling_quantile": 0.022483025315888423,
+    "EWMA": 1.0603197769194608,
+    "CUSUM": 1.5087565142938533,
+    "BOCPD": 0.03316165162890901
+  },
+  "comparator_development_burdens": {
+    "Rt_P_gt_1": {
+      "events_per_100d": 2.2508038585209005,
+      "null_curve_fpr": 0.9833333333333333,
+      "alert_days_per_100d": 2.2508038585209005,
+      "mean_episode_duration_days": 1.0
+    },
+    "rolling_quantile": {
+      "events_per_100d": 1.9700194737557175,
+      "null_curve_fpr": 0.9916666666666667,
+      "alert_days_per_100d": 1.9700194737557175,
+      "mean_episode_duration_days": 1.0
+    },
+    "EWMA": {
+      "events_per_100d": 2.2508038585209005,
+      "null_curve_fpr": 0.8333333333333334,
+      "alert_days_per_100d": 2.2508038585209005,
+      "mean_episode_duration_days": 1.0
+    },
+    "CUSUM": {
+      "events_per_100d": 2.1466419093338165,
+      "null_curve_fpr": 0.9583333333333334,
+      "alert_days_per_100d": 2.1466419093338165,
+      "mean_episode_duration_days": 1.0
+    },
+    "BOCPD": {
+      "events_per_100d": 2.2508038585209005,
+      "null_curve_fpr": 0.925,
+      "alert_days_per_100d": 2.2508038585209005,
+      "mean_episode_duration_days": 1.0
+    }
+  },
+  "success_criteria": {
+    "primary_point_sensitivity_at_least": 0.8,
+    "primary_paired_difference_versus_Rt_greater_than": 0.0,
+    "actual_alert_days_per_100d_at_most": 2.6
+  },
+  "interpretation_boundary": "This is a different operating tier, not a revision of the confirmed 1.5-burden result and not evidence that the algorithm improved at the same alert burden.",
+  "development_source_hashes": {
+    "score_arrays": "f78d50143a2f728c5eddeaa70f1dd4d9e6138a8b360f3b9ffa41221d4ade21bd",
+    "curve_arrays": "c62873273ac4b522b578fc12dbbf979e38966d1b35f11b546dfc1a2d0407118a"
+  }
+}
